@@ -35,8 +35,6 @@ Basic as it comes, this is just an install of git that you can run from your
 preferred terminal. Again, try it if you fancy a cleaner experience, want to
 use your own editor, or just want to look cool.
 
----
-
 ## FAQs
 
 ### *1. Can I edit the content?*

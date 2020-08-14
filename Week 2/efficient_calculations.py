@@ -5,6 +5,7 @@ Spyder Editor
 This is a temporary script file.
 """
 
+
 def fact(n):
     """Calculate n!"""
     if n == 0:
@@ -14,23 +15,24 @@ def fact(n):
 
 print(f"5! is equal to {fact(5)}")
 
+
 def oldExpTaylor(n, x):
     """Calculate exp(x) with n terms.
-    
+
     1.19ms <- Run `%timeit oldExpTaylor(100, 5)` in iPython
     """
     output = 0
     for k in range(n):
         output += x**k / fact(k)
-        
+
     return output
 
 
 def expTaylor(n, x):
     """Calculate exp(x) with n terms.
-    
+
     10.3us <- Run `%timeit expTaylor(100, 5)` in iPython
-    
+
     Rationale
     ---------
     Term 1. x**1 / fact(1) = x / 1
@@ -44,7 +46,7 @@ def expTaylor(n, x):
     output = term  # Start with the first term, to avoid ZeroDivisionError
     for k in range(1, n):
         term   *= x / k
-        output += term        
+        output += term
     return output
 
 
